@@ -2,14 +2,14 @@
 
 ## Présentation du projet
 
-IndiNAT est une plateforme web dédiée à la consultation d’indicateurs nationaux sur les poissons migrateurs amphihalins en France (saumon, aloses, lamproies, truite de mer, mulet porc, etc.).
+IndiNAT est une plateforme web dédiée à la consultation d’indicateurs nationaux sur l'état des populations des poissons migrateurs amphihalins en France.
 
 Le site a été développé dans le cadre du **Plan National en faveur des Migrateurs Amphihalins (PNMA)** par les **Associations Migrateurs de France**, afin de centraliser et valoriser les données de suivi des populations à l’échelle nationale.
 
 L’objectif principal du site est de proposer une interface claire et accessible permettant :
 
 * de présenter le contexte du PNMA et du projet IndiNAT ;
-* de consulter différents indicateurs biologiques et environnementaux ;
+* de consulter différents indicateurs d'état des populations ;
 * d’accéder à des tableaux de bord interactifs Tableau Public ;
 * de découvrir les différentes associations migrateurs françaises et leurs territoires d’action.
 
