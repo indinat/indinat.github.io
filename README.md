@@ -1,4 +1,34 @@
+![IndiNAT](assets/banniere-AM.png)
+
 # Indicateurs Nationaux des Poissons Migrateurs
+
+<details>
+<summary><strong>📑 Table des matières</strong></summary>
+
+<br>
+
+- [Présentation du projet](#présentation-du-projet)
+- [Structure technique du site](#structure-technique-du-site)
+- [Fonctionnalités principales](#fonctionnalités-principales)
+  - [Navigation fluide](#navigation-fluide)
+  - [Header dynamique](#header-dynamique)
+  - [Widget interactif des indicateurs](#widget-interactif-des-indicateurs)
+  - [Responsive design](#responsive-design)
+  - [Lightbox Mentions légales](#lightbox-mentions-légales)
+- [Organisation du projet](#organisation-du-projet)
+- [Dépendances externes](#dépendances-externes)
+- [Hébergement](#hébergement)
+- [Maintenance](#maintenance)
+  - [Principe général](#principe-général)
+  - [Gestion des images d'espèces](#gestion-des-images-despèces)
+  - [Gestion des indicateurs](#gestion-des-indicateurs)
+    - [ID indicateur](#id-indicateur)
+  - [Liens générés automatiquement](#liens-générés-automatiquement)
+  - [Bonnes pratiques lors des modifications](#bonnes-pratiques-lors-des-modifications)
+- [Auteur](#auteur)
+- [Structure détaillée du site](#structure-détaillée-du-site)
+
+</details>
 
 ### Présentation du projet
 
@@ -62,7 +92,7 @@ Le site est entièrement responsive :
 
 ### Lightbox Mentions légales
 
-Les mentions légales sont affichées dans une lightbox HTML/CSS sans dépendance externe.
+Les mentions légales sont affichées dans une lightbox HTML / CSS sans dépendance externe.
 
 ---
 
@@ -92,7 +122,7 @@ Le projet utilise plusieurs ressources externes :
 
 ## Hébergement
 
-Le site peut être déployé sur tout hébergement statique compatible HTML/CSS/JavaScript :
+Le site peut être déployé sur tout hébergement statique compatible HTML / CSS / JavaScript.
 
 ---
 
@@ -110,11 +140,13 @@ Il s'agit d'une application web statique dont le contenu est directement intégr
 
 Les fichiers sont bien structurés et annotés mais leur maintenance nécessite des connaissances de base en HTML / CSS / JavaScript.
 
+Le widget de visualisation des indicateurs est essentiellement géré via JavaScript, ses élements HTML sont automatisés.
+
 ---
 
 ### Gestion des images d'espèces
 
-Les images affichées dans le widget sont définies dans l'objet JavaScript :
+Les images affichées dans le widget de visualition des indicateurs sont définies dans l'objet JavaScript :
 
 ```js
 const speciesImages = {
@@ -124,7 +156,7 @@ const speciesImages = {
   etc...
 };
 ```
-Il est possible d'ajouter une image et de modifier ou supprimer une image existante en ajoutant modifiant ou supprimant l'entrée correspondante dans cet objet. Les entrées doivent être séparées par une "," (sauf après la dernière entrée).
+Il est possible d'ajouter une image et de modifier ou supprimer une image existante en ajoutant modifiant ou supprimant l'entrée correspondante dans cet objet. Les entrées doivent être séparées par une `,` (sauf après la dernière entrée). Remplacer `NOM DE L'ESPECE` et `URL DE L'IMAGE`.
 
 ---
 
@@ -134,7 +166,7 @@ Les indicateurs disponibles pour chaque espèce sont définis dans l'objet :
 
 ```js
 const data = {
-  "NOM-DE-L'ESPECE-1": {
+  "NOM DE L'ESPECE 1": {
 
     "INTITULE DE L'INDICATEUR 1": `
       <div class="tableau-wrapper">
@@ -156,7 +188,7 @@ const data = {
   },
 "NOM DE L'ESPECE 2": {
 
-    "INTITULE-DE-L'INDICATEUR-1": `
+    "INTITULE DE L'INDICATEUR 1": `
       <div class="tableau-wrapper">
         <iframe
           src="https://public.tableau.com/views/ID DU TABLEAU PUBLIC DE L'INDICATEUR 1/TB?:showVizHome=no"
@@ -164,7 +196,7 @@ const data = {
         </iframe>
       </div>`,
 
-    "INTITULE-DE-L'INDICATEUR-2": `
+    "INTITULE DE L'INDICATEUR 2": `
       <div class="tableau-wrapper">
         <iframe
           src="https://public.tableau.com/views/ID DU TABLEAU PUBLIC DE L'INDICATEUR 2/TB?:showVizHome=no"
@@ -178,11 +210,11 @@ const data = {
 };
 ```
 
-Il est possible d'ajouter un indicateur et de modifier ou supprimer un indicateur existant en ajoutant modifiant ou supprimant l'entrée correspondante dans cet objet. Les entrées doivent être séparées par une "," (sauf après la dernière entrée).
+Il est possible d'ajouter un indicateur et de modifier ou supprimer un indicateur existant en ajoutant modifiant ou supprimant l'entrée correspondante dans cet objet. Les entrées doivent être séparées par une `,` (sauf après la dernière entrée). Remplacer `NOM DE L'ESPECE #` et `ID DU TABLEAU PUBLIC DE L'INDICATEUR #`.
 
 #### ID indicateur
 
-L'identifiant Tableau Public d'un indicateur est renseigné dans son code dintégration Tableau Public, dans la valeur de la div paramétrique du nom (name) :
+L'identifiant Tableau Public d'un indicateur est renseigné dans son code dintégration Tableau Public, dans la valeur de la div paramétrique `<param/>` du nom (name) à la 5ème ligne :
 
 Exemple d'un code d'intégration Tableau Public :
 ```html
