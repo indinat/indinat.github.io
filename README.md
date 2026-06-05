@@ -2,73 +2,73 @@
 
 ## Présentation du projet
 
-IndiNAT est une plateforme web dédiée à la consultation d’indicateurs nationaux sur l'état des populations des poissons migrateurs amphihalins en France.
+IndiNAT est une plateforme web dédiée à la consultation d’indicateurs nationaux sur l’état des populations de poissons migrateurs amphihalins en France.
 
 Le site a été développé dans le cadre du **Plan National en faveur des Migrateurs Amphihalins (PNMA)** par les **Associations Migrateurs de France**, afin de centraliser et valoriser les données de suivi des populations à l’échelle nationale.
 
 L’objectif principal du site est de proposer une interface claire et accessible permettant :
 
-* de présenter le contexte du PNMA et du projet IndiNAT ;
-* de consulter différents indicateurs d'état des populations ;
-* d’accéder à des tableaux de bord interactifs Tableau Public ;
-* de découvrir les différentes associations migrateurs françaises et leurs territoires d’action.
+- de présenter le contexte du PNMA et du projet IndiNAT ;
+- de consulter différents indicateurs d’état des populations ;
+- d’accéder à des tableaux de bord interactifs Tableau Public ;
+- de découvrir les différentes associations migrateurs françaises et leurs territoires d’action.
 
 ---
 
-## Structure technique du site
+# Structure technique du site
 
 Le projet repose sur une architecture web simple et légère composée de :
 
-* **HTML5** pour la structure du site ;
-* **CSS3** pour le design, les animations et le responsive mobile ;
-* **JavaScript (Vanilla JS + jQuery)** pour les interactions dynamiques ;
-* **Tableau Public** pour l’intégration des visualisations interactives ;
-* **Bootstrap** et **Font Awesome** pour certains composants graphiques.
+- **HTML5** pour la structure du site ;
+- **CSS3** pour le design, les animations et le responsive ;
+- **JavaScript (Vanilla JS + jQuery)** pour les interactions dynamiques ;
+- **Tableau Public** pour l’intégration des visualisations interactives ;
+- **Bootstrap** et **Font Awesome** pour certains composants graphiques.
 
 Le site est entièrement statique.
 
 ---
 
-## Fonctionnalités principales
+# Fonctionnalités principales
 
-### Navigation fluide
+## Navigation fluide
 
-Le site utilise un système de navigation par ancres avec scroll fluide permettant d’accéder rapidement aux différentes sections.
+Le site utilise un système de navigation par ancres avec défilement fluide permettant d’accéder rapidement aux différentes sections.
 
-### Header dynamique
+## Header dynamique
 
 Un header fixe apparaît automatiquement lors du défilement afin de conserver un accès rapide au menu de navigation.
 
-### Widget interactif des indicateurs
+## Widget interactif des indicateurs
 
 La section principale du site permet :
 
-* de sélectionner une espèce ;
-* de choisir un indicateur associé ;
-* d’afficher dynamiquement un tableau de bord Tableau Public ;
-* d’ouvrir les visualisations en plein écran ;
-* d’afficher automatiquement l’image de l’espèce sélectionnée.
+- de sélectionner une espèce ;
+- de choisir un indicateur associé ;
+- d’afficher dynamiquement un tableau de bord Tableau Public ;
+- d’ouvrir les visualisations en plein écran ;
+- d’afficher automatiquement l’image de l’espèce sélectionnée.
 
 Toutes les données des indicateurs sont centralisées dans un objet JavaScript facilitant l’ajout futur de nouvelles espèces ou de nouveaux tableaux.
 
-### Responsive design
+## Responsive design
 
 Le site est entièrement responsive :
 
-* menu burger sur mobile ;
-* réorganisation automatique des blocs ;
-* adaptation des tableaux et images ;
-* optimisation de l’affichage tactile.
+- menu burger sur mobile ;
+- réorganisation automatique des blocs ;
+- adaptation des tableaux et images ;
+- optimisation de l’affichage tactile.
 
-### Lightbox Mentions légales
+## Lightbox Mentions légales
 
-Les mentions légales sont affichées dans une lightbox CSS/HTML sans dépendance externe.
+Les mentions légales sont affichées dans une lightbox HTML/CSS sans dépendance externe.
 
 ---
 
-## Organisation du projet
+# Organisation du projet
 
-```bash
+```text
 /
 ├── index.html      # Structure principale du site
 ├── style.css       # Styles et responsive design
@@ -78,30 +78,150 @@ Les mentions légales sont affichées dans une lightbox CSS/HTML sans dépendanc
 
 ---
 
-## Dépendances externes
+# Dépendances externes
 
 Le projet utilise plusieurs ressources externes :
 
-* jQuery 3.1.0
-* Bootstrap 3.3.5
-* Font Awesome 4.4.0
-* Google Fonts (Raleway)
-* Tableau Public
+- jQuery 3.1.0
+- Bootstrap 3.3.5
+- Font Awesome 4.4.0
+- Google Fonts (Raleway)
+- Tableau Public
 
 ---
 
-## Hébergement
+# Hébergement
 
-Le site est prévu pour être déployé sur tout hébergement statique compatible HTML/CSS/JS.
+Le site peut être déployé sur tout hébergement statique compatible HTML/CSS/JavaScript :
 
 ---
 
-## Auteur / Maintenance
+# Maintenance
 
-Projet développé pour les **Associations Migrateurs de France**.
+## Principe général
 
+Le site ne dispose d'aucune interface d’administration (back-office).
 
-# Structure du site :
+Il s'agit d'une application web statique dont le contenu est directement intégré dans les fichiers sources. Toute modification nécessite donc une intervention manuelle dans les fichiers :
+
+- `index.html`
+- `style.css`
+- `script.js`
+
+Les fichiers sont bien structurés et annotés mais leur maintenance nécessite des connaissances de base en HTML / CSS / JavaScript.
+
+---
+
+## Gestion des images d'espèces
+
+Les images affichées dans le widget sont définies dans l'objet JavaScript :
+
+```js
+const speciesImages = {
+  "NOM DE L'ESPECE": "URL DE L'IMAGE",
+  "NOM DE L'ESPECE": "URL DE L'IMAGE",
+  "NOM DE L'ESPECE": "URL DE L'IMAGE",
+  etc...
+};
+```
+Il est possible d'ajouter une image et de modifier ou supprimer une image existante en ajoutant modifiant ou supprimant l'entrée correspondante dans cet objet. Les entrées doivent être séparées par une "," (sauf après la dernière entrée).
+
+---
+
+## Gestion des indicateurs
+
+Les indicateurs disponibles pour chaque espèce sont définis dans l'objet :
+
+```js
+const data = {
+  "NOM-DE-L'ESPECE-1": {
+
+    "INTITULE DE L'INDICATEUR 1": `
+      <div class="tableau-wrapper">
+        <iframe
+          src="https://public.tableau.com/views/ID DU TABLEAU PUBLIC DE L'INDICATEUR 1/TB?:showVizHome=no"
+          class="tableau-frame">
+        </iframe>
+      </div>`,
+
+    "INTITULE DE L'INDICATEUR 2": `
+      <div class="tableau-wrapper">
+        <iframe
+          src="https://public.tableau.com/views/ID DU TABLEAU PUBLIC DE L'INDICATEUR 2/TB?:showVizHome=no"
+          class="tableau-frame">
+        </iframe>
+      </div>`
+
+    etc...
+  },
+"NOM DE L'ESPECE 2": {
+
+    "INTITULE-DE-L'INDICATEUR-1": `
+      <div class="tableau-wrapper">
+        <iframe
+          src="https://public.tableau.com/views/ID DU TABLEAU PUBLIC DE L'INDICATEUR 1/TB?:showVizHome=no"
+          class="tableau-frame">
+        </iframe>
+      </div>`,
+
+    "INTITULE-DE-L'INDICATEUR-2": `
+      <div class="tableau-wrapper">
+        <iframe
+          src="https://public.tableau.com/views/ID DU TABLEAU PUBLIC DE L'INDICATEUR 2/TB?:showVizHome=no"
+          class="tableau-frame">
+        </iframe>
+      </div>`
+
+     etc...
+  },
+  etc...
+};
+```
+
+Il est possible d'ajouter un indicateur et de modifier ou supprimer un indicateur existant en ajoutant modifiant ou supprimant l'entrée correspondante dans cet objet. Les entrées doivent être séparées par une "," (sauf après la dernière entrée).
+
+---
+
+## Liens générés automatiquement
+
+Les liens :
+
+- **Ouvrir en plein écran**
+- **Ouvrir dans Tableau Public**
+
+sont générés automatiquement à partir de l’URL renseignée dans l’élément `<iframe>`.
+
+Aucune modification supplémentaire n’est donc nécessaire pour ces fonctionnalités.
+
+---
+
+## Bonnes pratiques lors des modifications
+
+Après chaque modification, il est recommandé de vérifier :
+
+1. la validité des URL Tableau Public ;
+2. l’accessibilité des images ;
+3. le bon fonctionnement du widget ;
+4. l’affichage sur ordinateur et mobile ;
+5. les liens externes générés automatiquement.
+
+---
+
+# Auteur
+
+Projet développé pour les **Associations Migrateurs de France** :
+
+- Bretagne Grands Migrateurs (BGM)
+- Loire Grands Migrateurs (LOGRAMI)
+- Migrateurs Garonne Dordogne Charente Seudre (MIGADO)
+- Migrateurs Adour (MIGRADOUR)
+- Migrateurs Rhône Méditerranée (MRM)
+- Rhin Meuse Migrateurs (R2M)
+- Seine Normandie Migrateurs (SEINORMIGR)
+
+---
+
+# Structure détaillée du site
 
 ```txt
 indinat.github.io
