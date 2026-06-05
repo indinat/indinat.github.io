@@ -210,7 +210,7 @@ const data = {
 };
 ```
 
-Il est possible d'ajouter un indicateur et de modifier ou supprimer un indicateur existant en ajoutant, modifiant ou supprimant l'entrée correspondante dans cet objet. Les entrées doivent être séparées par une `,` (sauf après la dernière entrée). Remplacer `NOM DE L'ESPECE #` et `ID DU TABLEAU PUBLIC DE L'INDICATEUR #`.
+Il est possible d'ajouter un indicateur et de modifier ou supprimer un indicateur existant en ajoutant, modifiant ou supprimant l'entrée correspondante dans cet objet. Les entrées doivent être séparées par une `,` (sauf après la dernière entrée). Remplacer `NOM DE L'ESPECE #`, `INTITULE DE L'INDICATEUR #` et `ID DU TABLEAU PUBLIC DE L'INDICATEUR #`.
 
 #### ID indicateur
 
