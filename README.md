@@ -144,7 +144,7 @@ Le widget de visualisation des indicateurs est essentiellement géré via JavaSc
 
 ---
 
-###Mise à jour des ressources internes
+### ise à jour des ressources internes
 
 Pour changer une image, un logo ou un document déjà éxistant sur le site (changement de version), il faut supprimer l'élément en question du dossier `assets` et importer la nouvelle version à la place. La nouvelle version doit impérativement porter le même nom et extension que l'ancienne afin que le lien contenu dans le fichier `index.html` reste fonctionnel.
 
