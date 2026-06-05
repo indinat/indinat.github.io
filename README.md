@@ -168,7 +168,7 @@ Il est possible d'ajouter une image et de modifier ou supprimer une image exista
 
 ### Gestion des indicateurs
 
-Les indicateurs disponibles pour chaque espèce sont définis dans l'objet :
+Les indicateurs disponibles pour chaque espèce sont définis dans l'objet JavaScript :
 
 ```js
 const data = {
