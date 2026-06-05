@@ -1,6 +1,6 @@
-# IndiNAT — Indicateurs Nationaux des Poissons Migrateurs
+# Indicateurs Nationaux des Poissons Migrateurs
 
-## Présentation du projet
+### Présentation du projet
 
 IndiNAT est une plateforme web dédiée à la consultation d’indicateurs nationaux sur l’état des populations de poissons migrateurs amphihalins en France.
 
@@ -15,7 +15,7 @@ L’objectif principal du site est de proposer une interface claire et accessibl
 
 ---
 
-# Structure technique du site
+## Structure technique du site
 
 Le projet repose sur une architecture web simple et légère composée de :
 
@@ -29,17 +29,17 @@ Le site est entièrement statique.
 
 ---
 
-# Fonctionnalités principales
+## Fonctionnalités principales
 
-## Navigation fluide
+### Navigation fluide
 
 Le site utilise un système de navigation par ancres avec défilement fluide permettant d’accéder rapidement aux différentes sections.
 
-## Header dynamique
+### Header dynamique
 
 Un header fixe apparaît automatiquement lors du défilement afin de conserver un accès rapide au menu de navigation.
 
-## Widget interactif des indicateurs
+### Widget interactif des indicateurs
 
 La section principale du site permet :
 
@@ -51,7 +51,7 @@ La section principale du site permet :
 
 Toutes les données des indicateurs sont centralisées dans un objet JavaScript facilitant l’ajout futur de nouvelles espèces ou de nouveaux tableaux.
 
-## Responsive design
+### Responsive design
 
 Le site est entièrement responsive :
 
@@ -60,13 +60,13 @@ Le site est entièrement responsive :
 - adaptation des tableaux et images ;
 - optimisation de l’affichage tactile.
 
-## Lightbox Mentions légales
+### Lightbox Mentions légales
 
 Les mentions légales sont affichées dans une lightbox HTML/CSS sans dépendance externe.
 
 ---
 
-# Organisation du projet
+## Organisation du projet
 
 ```text
 /
@@ -78,7 +78,7 @@ Les mentions légales sont affichées dans une lightbox HTML/CSS sans dépendanc
 
 ---
 
-# Dépendances externes
+## Dépendances externes
 
 Le projet utilise plusieurs ressources externes :
 
@@ -90,15 +90,15 @@ Le projet utilise plusieurs ressources externes :
 
 ---
 
-# Hébergement
+## Hébergement
 
 Le site peut être déployé sur tout hébergement statique compatible HTML/CSS/JavaScript :
 
 ---
 
-# Maintenance
+## Maintenance
 
-## Principe général
+### Principe général
 
 Le site ne dispose d'aucune interface d’administration (back-office).
 
@@ -112,7 +112,7 @@ Les fichiers sont bien structurés et annotés mais leur maintenance nécessite 
 
 ---
 
-## Gestion des images d'espèces
+### Gestion des images d'espèces
 
 Les images affichées dans le widget sont définies dans l'objet JavaScript :
 
@@ -128,7 +128,7 @@ Il est possible d'ajouter une image et de modifier ou supprimer une image exista
 
 ---
 
-## Gestion des indicateurs
+### Gestion des indicateurs
 
 Les indicateurs disponibles pour chaque espèce sont définis dans l'objet :
 
@@ -180,9 +180,49 @@ const data = {
 
 Il est possible d'ajouter un indicateur et de modifier ou supprimer un indicateur existant en ajoutant modifiant ou supprimant l'entrée correspondante dans cet objet. Les entrées doivent être séparées par une "," (sauf après la dernière entrée).
 
+#### ID indicateur
+
+L'identifiant Tableau Public d'un indicateur est renseigné dans son code dintégration Tableau Public, dans la valeur de la div paramétrique du nom (name) :
+
+Exemple d'un code d'intégration Tableau Public :
+```html
+<div class='tableauPlaceholder' id='viz1767793437879' style='position: relative'><noscript><a href='#'><img alt='TB ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;SA&#47;SATTACONS2024&#47;TB&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'>
+    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+    <param name='embed_code_version' value='3' />
+    <param name='site_root' value='' />
+    <param name='name' value='SATTACONS2024&#47;TB' />   <!-- Ligne contenant l'information ID DE l'INDICATEUR, renseigné après "value=" (seulement les caractères avant "&"). Exemple ici = SATTACONS2024 -->
+    <param name='tabs' value='no' />
+    <param name='toolbar' value='yes' />
+    <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;SA&#47;SATTACONS2024&#47;TB&#47;1.png' />
+    <param name='animate_transition' value='yes' />
+    <param name='display_static_image' value='yes' />
+    <param name='display_spinner' value='yes' />
+    <param name='display_overlay' value='yes' />
+    <param name='display_count' value='yes' />
+    <param name='language' value='fr-FR' />
+  </object></div>
+<script type='text/javascript'>
+  var divElement = document.getElementById('viz1767793437879');
+  var vizElement = divElement.getElementsByTagName('object')[0];
+  if (divElement.offsetWidth > 800) {
+    vizElement.style.width = '1169px';
+    vizElement.style.height = '1681px';
+  } else if (divElement.offsetWidth > 500) {
+    vizElement.style.width = '1169px';
+    vizElement.style.height = '1681px';
+  } else {
+    vizElement.style.width = '100%';
+    vizElement.style.height = '3427px';
+  }
+  var scriptElement = document.createElement('script');
+  scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+  vizElement.parentNode.insertBefore(scriptElement, vizElement);
+</script>
+```
+
 ---
 
-## Liens générés automatiquement
+### Liens générés automatiquement
 
 Les liens :
 
@@ -195,7 +235,7 @@ Aucune modification supplémentaire n’est donc nécessaire pour ces fonctionna
 
 ---
 
-## Bonnes pratiques lors des modifications
+### Bonnes pratiques lors des modifications
 
 Après chaque modification, il est recommandé de vérifier :
 
@@ -207,7 +247,7 @@ Après chaque modification, il est recommandé de vérifier :
 
 ---
 
-# Auteur
+## Auteur
 
 Projet développé pour les **Associations Migrateurs de France** :
 
@@ -221,7 +261,7 @@ Projet développé pour les **Associations Migrateurs de France** :
 
 ---
 
-# Structure détaillée du site
+## Structure détaillée du site
 
 ```txt
 indinat.github.io
