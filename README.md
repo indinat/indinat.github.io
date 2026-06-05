@@ -69,7 +69,7 @@ Le site utilise un système de navigation par ancres avec défilement fluide per
 
 Un header fixe apparaît automatiquement lors du défilement afin de conserver un accès rapide au menu de navigation.
 
-### Widget interactif des indicateurs
+### Widget interactif de visualisation des indicateurs
 
 La section principale du site permet :
 
@@ -144,9 +144,15 @@ Le widget de visualisation des indicateurs est essentiellement géré via JavaSc
 
 ---
 
+###Mise à jour des ressources internes
+
+Pour changer une image, un logo ou un document déjà éxistant sur le site (changement de version), il faut supprimer l'élément en question du dossier `assets` et importer la nouvelle version à la place. La nouvelle version doit impérativement porter le même nom et extension que l'ancienne afin que le lien contenu dans le fichier `index.html` reste fonctionnel.
+
+---
+
 ### Gestion des images d'espèces
 
-Les images affichées dans le widget de visualition des indicateurs sont définies dans l'objet JavaScript :
+Les images affichées dans le widget de visualisation des indicateurs sont définies dans l'objet JavaScript :
 
 ```js
 const speciesImages = {
@@ -258,7 +264,7 @@ Exemple d'un code d'intégration Tableau Public :
 
 Les liens sont générés automatiquement à partir de l’URL renseignée dans l’élément `<iframe>` :
 
-- **Ouvrir en plein écran** (exploitation direct de l'url contenue dans l'iframe)
+- **Ouvrir en plein écran** (exploitation directe de l'url contenue dans l'iframe)
 - **Ouvrir dans Tableau Public** (modfication du paramètre de requête de l'url contenue dans l'iframe pour `:origin=viz_share_link`)
 
 
@@ -352,14 +358,6 @@ indinat.github.io
 │       │       ├── SECTION 3 : Indicateurs (#indicateurs)
 │       │       │   │
 │       │       │   ├── Boutons espèces
-│       │       │   │   ├── Saumon
-│       │       │   │   ├── Grande alose
-│       │       │   │   ├── Alose feinte
-│       │       │   │   ├── Alose agone
-│       │       │   │   ├── Lamproie marine
-│       │       │   │   ├── Truite de mer
-│       │       │   │   └── Mulet porc
-│       │       │   │
 │       │       │   ├── Sélecteur indicateur (<select>)
 │       │       │   ├── Image espèce dynamique
 │       │       │   ├── Bouton plein écran
@@ -377,14 +375,6 @@ indinat.github.io
 │       │           │   └── Liste à puces
 │       │           │
 │       │           ├── Bloc grille associations
-│       │           │   │
-│       │           │   ├── Bretagne Grands Migrateurs
-│       │           │   ├── LOGRAMI
-│       │           │   ├── MIGADO
-│       │           │   ├── MIGRADOUR
-│       │           │   ├── MRM
-│       │           │   ├── R2M
-│       │           │   └── SEINORMIGR
 │       │           │
 │       │           │   Chaque carte contient :
 │       │           │   ├── Image/logo
@@ -395,8 +385,8 @@ indinat.github.io
 │       │           └── Bloc lien portail OFB
 │       │
 │       ├── FOOTER
-│       │   ├── Texte financement OFB
-│       │   ├── Logo OFB
+│       │   ├── Texte financement
+│       │   ├── Logo financement
 │       │   ├── Copyright
 │       │   └── Bouton Mentions légales
 │       │
