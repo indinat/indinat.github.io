@@ -521,17 +521,25 @@ footer div p {
   position: absolute;
   margin-top: -70px;
 }
+.lien-site-FNPF {
+  right: 100px;
+  position: absolute;
+  margin-top: -70px;
+}
 
-.logo-OFB {
+.logo-footer {
   max-height: 60px;
   width: auto;
 }
 
-.lien-site-OFB-mobile {
+.lien-footer-mobile {
   display: none;
 }
 
 /* MENTIONS LÉGALES */
+.split-cpr-mobile {
+    display: none;
+  }
 .mentions-legales {
   color: white;
   text-decoration: none;
@@ -901,20 +909,26 @@ footer div p {
     padding: 20px;
     gap: 15px;
   }
-  .lien-site-OFB-mobile {
-    display: block;
+  .lien-footer-mobile {
+    display: inline-block;
   }
-  .lien-site-OFB {
+  .lien-footer {
     display: none;
   }
-  .logo-OFB {
-    max-height: 50px;
-    height: 40px;
+  .logo-footer-mobile {
+    max-height: 80px;
+    height: 65px;
     margin: 0 auto;
     float: none;
   }
+  .logo-OFB-mobile {
+    margin-right: 20px;
+  }
   .copyright {
     margin-top: 20px;
+  }
+  .split-cpr-mobile {
+    display: block;
   }
   .mentions-legales-container {
     width: 90%;
