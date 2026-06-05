@@ -256,12 +256,11 @@ Exemple d'un code d'intégration Tableau Public :
 
 ### Liens générés automatiquement
 
-Les liens :
+Les liens sont générés automatiquement à partir de l’URL renseignée dans l’élément `<iframe>` :
 
-- **Ouvrir en plein écran**
-- **Ouvrir dans Tableau Public**
+- **Ouvrir en plein écran** (exploitation direct de l'url contenue dans l'iframe)
+- **Ouvrir dans Tableau Public** (modfication du paramètre de requête de l'url contenue dans l'iframe pour `:origin=viz_share_link`)
 
-sont générés automatiquement à partir de l’URL renseignée dans l’élément `<iframe>`.
 
 Aucune modification supplémentaire n’est donc nécessaire pour ces fonctionnalités.
 
