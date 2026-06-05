@@ -214,7 +214,7 @@ Il est possible d'ajouter un indicateur et de modifier ou supprimer un indicateu
 
 #### ID indicateur
 
-L'identifiant Tableau Public d'un indicateur est renseigné dans son code dintégration Tableau Public, dans la valeur de la div paramétrique `<param/>` du nom (name) à la 5ème ligne :
+L'identifiant Tableau Public d'un indicateur est renseigné dans son code d'intégration Tableau Public, dans la valeur de la div paramétrique `<param/>` du nom (name) à la 5ème ligne :
 
 Exemple d'un code d'intégration Tableau Public :
 ```html
