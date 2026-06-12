@@ -2,6 +2,12 @@
 
 # Indicateurs Nationaux des Poissons Migrateurs
 
+---
+
+Accès au site web : [indinat.github.io](https://indinat.github.io)
+
+---
+
 <details>
 <summary><strong>📑 Table des matières</strong></summary>
 
@@ -32,16 +38,16 @@
 
 ### Présentation du projet
 
-IndiNAT est une plateforme web dédiée à la consultation d’indicateurs nationaux sur l’état des populations de poissons migrateurs amphihalins en France.
+IndiNAT est une plateforme web dédiée à la consultation d’indicateurs nationaux sur l’état des populations des poissons migrateurs amphihalins en France.
 
 Le site a été développé dans le cadre du **Plan National en faveur des Migrateurs Amphihalins (PNMA)** par les **Associations Migrateurs de France**, afin de centraliser et valoriser les données de suivi des populations à l’échelle nationale.
 
 L’objectif principal du site est de proposer une interface claire et accessible permettant :
 
-- de présenter le contexte du PNMA et du projet IndiNAT ;
-- de consulter différents indicateurs d’état des populations ;
-- d’accéder à des tableaux de bord interactifs Tableau Public ;
-- de découvrir les différentes associations migrateurs françaises et leurs territoires d’action.
+- de présenter le contexte du PNMA et le projet IndiNAT ;
+- de consulter des tableaux de bord interactifs ;
+- d’accéder à différents indicateurs nationaux et locaux d’état des populations ;
+- de découvrir les associations migrateurs françaises et leurs territoires d’action.
 
 ---
 
@@ -122,7 +128,7 @@ Le projet utilise plusieurs ressources externes :
 
 ## Hébergement
 
-Le site peut être déployé sur tout hébergement statique compatible HTML / CSS / JavaScript.
+Le site peut être déployé sur tout hébergement compatible HTML / CSS / JavaScript. Aucune base de données n'est nécessaire, seul un espace serveur est requis.
 
 ---
 
@@ -132,13 +138,13 @@ Le site peut être déployé sur tout hébergement statique compatible HTML / CS
 
 Le site ne dispose d'aucune interface d’administration (back-office).
 
-Il s'agit d'une application web statique dont le contenu est directement intégré dans les fichiers sources. Toute modification nécessite donc une intervention manuelle dans les fichiers :
+Il s'agit d'un site web statique dont le contenu est directement intégré dans les fichiers sources. Toute modification nécessite donc une intervention manuelle dans les fichiers :
 
 - `index.html`
 - `style.css`
 - `script.js`
 
-Les fichiers sont bien structurés et annotés mais leur maintenance nécessite des connaissances de base en HTML / CSS / JavaScript.
+Les fichiers sont bien structurés et annotés mais leur maintenance nécessite des connaissances de base des langages HTML / CSS / JavaScript.
 
 Le widget de visualisation des indicateurs est essentiellement géré via JavaScript, ses élements HTML sont automatisés.
 
@@ -257,6 +263,7 @@ Exemple d'un code d'intégration Tableau Public :
   vizElement.parentNode.insertBefore(scriptElement, vizElement);
 </script>
 ```
+La ligne contenant l'indicateur est `<param name='name' value='SATTACONS2024&#47;TB' />`. L'ID indicateur est renseigné après `value=` (seulement les caractères avant "&"). Exemple ici = `SATTACONS2024`.
 
 ---
 
@@ -265,7 +272,7 @@ Exemple d'un code d'intégration Tableau Public :
 Les liens sont générés automatiquement à partir de l’URL renseignée dans l’élément `<iframe>` :
 
 - **Ouvrir en plein écran** (exploitation directe de l'url contenue dans l'iframe)
-- **Ouvrir dans Tableau Public** (modfication du paramètre de requête de l'url contenue dans l'iframe pour `:origin=viz_share_link`)
+- **Ouvrir dans Tableau Public** (modfication automatique du paramètre de requête de l'url contenue dans l'iframe pour `:origin=viz_share_link`)
 
 
 Aucune modification supplémentaire n’est donc nécessaire pour ces fonctionnalités.
@@ -491,3 +498,7 @@ indinat.github.io
         ├── Animation burger
         └── Fermeture auto clic lien
 ```
+
+---
+
+© Associations Migrateurs de France - 2026
