@@ -495,6 +495,5 @@ indinat.github.io
         └── Fermeture auto clic lien
 ```
 
----
 
 © Associations Migrateurs de France - 2026
