@@ -259,7 +259,7 @@ Exemple d'un code d'intégration Tableau Public :
   vizElement.parentNode.insertBefore(scriptElement, vizElement);
 </script>
 ```
-La ligne contenant l'indicateur est `<param name='name' value='SATTACONS2024&#47;TB' />`. L'ID indicateur est renseigné après `value=` (seulement les caractères avant "&"). Exemple ici = `SATTACONS2024`.
+La ligne contenant l'indicateur est `<param name='name' value='SATTACONS2024&#47;TB' />`. L'ID indicateur est renseigné après `value=` (seulement les caractères avant `&`). Exemple ici = `SATTACONS2024`.
 
 ---
 
