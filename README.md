@@ -2,11 +2,7 @@
 
 # Indicateurs Nationaux des Poissons Migrateurs
 
----
-
 Accès au site web : [indinat.github.io](https://indinat.github.io)
-
----
 
 <details>
 <summary><strong>📑 Table des matières</strong></summary>
