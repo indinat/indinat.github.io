@@ -41,13 +41,13 @@ $(window).scroll(function () {
 // ======================
 
 const speciesImages = {
-  "Saumon": "https://seinormigr-barault.github.io/assets/SAT.png?max=400",
-  "Grande alose": "https://seinormigr-barault.github.io/assets/ALA.png?max=400",
-  "Alose feinte": "https://seinormigr-barault.github.io/assets/ALF.png?max=400",
-  "Alose agone": "https://seinormigr-barault.github.io/assets/ALF.png?max=400",
-  "Lamproie marine": "https://seinormigr-barault.github.io/assets/LPM.png?max=400",
-  "Truite de mer": "https://seinormigr-barault.github.io/assets/TRM.png?max=400",
-  "Mulet porc": "https://seinormigr-barault.github.io/assets/MUP.png?max=400"
+  "Saumon": "./assets/SAT.png?max=400",
+  "Grande alose": "./assets/ALA.png?max=400",
+  "Alose feinte": "./assets/ALF.png?max=400",
+  "Alose agone": "./assets/ALF.png?max=400",
+  "Lamproie marine": "./assets/LPM.png?max=400",
+  "Truite de mer": "./assets/TRM.png?max=400",
+  "Mulet porc": "./assets/MUP.png?max=400"
 };
 
 // ======================

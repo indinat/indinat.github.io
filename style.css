@@ -308,7 +308,7 @@ p:not(.p-AM, .p-chapeau, .copyright, .p-footer, .text-mentions-legales),
 #tableau-container {
   width: 100%;
   min-height: 180px;
-  background-image: url("https://seinormigr-barault.github.io/assets/Picto-TableauPublic.png");
+  background-image: url("./assets/Picto-TableauPublic.png");
   background-repeat: no-repeat;
   background-position: center;
 }
