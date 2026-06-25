@@ -124,7 +124,7 @@ Le projet utilise plusieurs ressources externes :
 
 ## Hébergement
 
-Le site peut être déployé sur tout hébergement compatible HTML / CSS / JavaScript. Aucune base de données n'est nécessaire, seul un espace serveur est requis. Le site fonctionne actuellement avec GitHub Pages. Pour se faire il faut créer un dépôt. Entrez `username.github.io` comme nom du dépôt, remplacez `username` par votre nom d’utilisateur GitHub. Par exemple ici, le nom d’utilisateur est `indinat`, le nom du dépôt doit donc être `indinat.github.io`. A partir de là, il suffit d'uploader le contenu du site dans le dépôt. Quelques minutes plus tard, le site web sera automatquement déployé et accessible via l'url `indinat.github.io` / `https://indinat.github.io`.
+Le site peut être déployé sur tout hébergement compatible HTML / CSS / JavaScript. Aucune base de données n'est nécessaire, seul un espace serveur est requis. Le site fonctionne actuellement avec GitHub Pages. Pour se faire il faut créer un dépôt. Entrez `username.github.io` comme nom du dépôt, remplacez `username` par votre nom d’utilisateur GitHub. Par exemple ici, le nom d’utilisateur est `indinat`, le nom du dépôt doit donc être `indinat.github.io`. A partir de là, il suffit d'uploader le contenu du site dans le dépôt. Quelques minutes plus tard, le site web sera automatiquement déployé et accessible via l'url `https://indinat.github.io`.
 
 ---
 
