@@ -164,7 +164,7 @@ const speciesImages = {
   etc...
 };
 ```
-Il est possible d'ajouter une image et de modifier ou supprimer une image existante en ajoutant, modifiant ou supprimant l'entrée correspondante dans cet objet. Les entrées doivent être séparées par une `,` (sauf après la dernière entrée). Remplacer `NOM DE L'ESPECE` et `URL DE L'IMAGE`.
+Il est possible d'ajouter une image et de modifier ou supprimer une image existante en ajoutant, modifiant ou supprimant l'entrée correspondante dans cet objet. Les entrées doivent être séparées par une `,` (sauf après la dernière entrée). Remplacer `NOM DE L'ESPECE` et `URL DE L'IMAGE`. La logique de fonctionnement actuel du site est de stocker toutes les ressources dans le dossier `assets`. Vous pouvez uploader la ou les nouvelles images dans ce dossier et utiliser la même base d'url que les autres espèce, à savoir `./assets/ALA.png?max=400`. Il s'agit d'un lien relatif, ce qui permet de maintienir les liens actifs en cas de changement d'hébergement ou de localisation du site. Il est également possible de renseigner une autre url pour pointer vers une image.
 
 ---
 
